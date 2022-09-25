@@ -27,4 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build Docker File
-        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        run: docker build . --file Dockerfile --tag uperformkarthick/sample-github-actions:$(date +%s)
+        
+      - name: Push docker image
+        run: docker push uperformkarthick/sample-github-actions:$(date +%s)
