@@ -48,5 +48,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: uperformkarthick/sample-github-actions:latest
+          tags: uperformkarthick/sample-github-actions:latest, uperformkarthick/sample-github-actions:${{ steps.vars.outputs.sha_short }}
           
